@@ -41,7 +41,10 @@ httpRoute:
         - path:
             type: PathPrefix
             value: /headers
-resources: {}
+resources:
+  requests:
+    cpu: 50m
+    memory: 50M
 livenessProbe:
   httpGet:
     path: /api/v1/healthz
